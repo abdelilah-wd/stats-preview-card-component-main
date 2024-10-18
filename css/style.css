@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+:root {
+    --main-background: hsl(233, 47%, 7%);
+    --card-background: hsl(244, 38%, 16%);
+    --accent: hsl(277, 64%, 61%);
+    --main-headingStats: hsl(0, 0%, 100%);
+    --main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    color: white;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* small  */
+@media (min-width: 576px) {
+    .container {
+        width: 520px;
+    }
+}
+
+/* medium  */
+@media (min-width: 768px) {
+    .container {
+        width: 720px;
+    }
+}
+
+/* large  */
+@media (min-width: 992px) {
+    .container {
+        width: 960px;
+    }
+}
+
+/* x-large  */
+@media (min-width: 1200px) {
+    .container {
+        width: 1140px;
+    }
+}
+
+.landing-section {
+    background-color: var(--main-background);
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+@media (max-width: 991px) {
+    .landing-section {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.landing-section .container {
+    position: relative;
+    height: 100%;
+}
+
+.landing-section .landing-content {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: var(--card-background);
+}
+
+@media (min-width: 992px) {
+    .landing-section .landing-content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+@media (max-width: 991px) {
+    .container {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        padding-left: 30px;
+        padding-right: 30px;
+        height: 100%;
+    }
+
+    .landing-section .landing-content {
+        width: fit-content;
+        position: relative;
+        flex-direction: column;
+        margin: auto;
+    }
+}
+
+.landing-content>div {
+    flex: 1;
+}
+
+.landing-content .lan-info {
+    padding: 0 60px;
+}
+
+@media (max-width: 991px) {
+    .landing-content .lan-info {
+        max-width: 540px;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .landing-content .lan-info h1 {
+        font-size: 30px !important;
+        margin: 10px 0 10px !important;
+    }
+}
+
+.landing-content .lan-info h1 {
+    font-size: 40px;
+    margin: 10px 0 10px;
+}
+
+@media(max-width: 400px) {
+    .landing-content .lan-info h1 {
+        font-size: 25px;
+    }
+}
+
+
+.landing-content .lan-info h1 span {
+    color: var(--accent);
+}
+
+@media (min-width: 576px) {
+    .landing-content .lan-info br {
+        display: none;
+    }
+}
+
+.landing-content .lan-info p {
+    color: var(--main-paragraph);
+    line-height: 1.8;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+@media (max-width: 992px) {
+    .landing-content .lan-info p br {
+        display: none;
+    }
+}
+
+.landing-content .lan-info .stats {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 575px) {
+    .landing-content .lan-info .stats {
+        flex-direction: column;
+
+    }
+}
+
+.landing-content .lan-info .stats>div {
+    flex: 1;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+.landing-content .lan-info .stats>div span {
+    font-size: 25px;
+    font-weight: 900;
+    display: block;
+}
+
+.landing-content .lan-info .stats>div p {
+    font-size: 12px;
+    margin-top: 5px;
+    color: var(--main-paragraph);
+}
+
+.landing-content .lan-img {
+    position: relative;
+}
+
+@media(max-width: 991px) {
+    .landing-content .lan-img {
+        order: -1;
+    }
+}
+
+.landing-content .lan-img>div::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: hsl(277deg 100% 49.65% / 37%);
+}
+
+.landing-content .lan-img img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* Start Footer Section  */
+.footer-section {
+    background-color: #111;
+    padding: 40px 10px;
+    text-align: center;
+    line-height: 1.8;
+    color: white;
+}
+
+.footer-section a {
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin: 20px 10px;
+    padding: 5px 10px;
+    background: var(--accent);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 22px;
+    display: inline-block;
+}
